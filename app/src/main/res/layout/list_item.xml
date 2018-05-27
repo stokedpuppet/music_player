@@ -1,32 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ebfaeb">
+
+
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/album_img_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
     
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/title_text_view"
+        android:textStyle="bold"
         tools:text="The Package"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/artist_text_view"
         tools:text="By: A Perfect Circle"
-        android:textSize="12dp"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/album_text_view"
         tools:text="On: Thirteenth Step"
-        android:textSize="12dp"/>
-    
+        android:textSize="12sp"/>
 
-</LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/album_img_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/play_button_image"
+        android:src="@drawable/play_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+
+
+
+
+
+</RelativeLayout>

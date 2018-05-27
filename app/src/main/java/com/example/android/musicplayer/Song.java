@@ -10,6 +10,11 @@ public class Song {
     /** Song album name */
     private String mAlbum;
 
+    /** Song album art */
+    private int mArtwork;
+
+
+
 
     /**
      * * Create a new Song object.
@@ -19,11 +24,14 @@ public class Song {
      * @param artist the artist of the song
      *
      * @param album the album name of the song
+     *
+     * @param artwork the album artwork of the song
      */
-    public Song(String title, String artist, String album) {
+    public Song(String title, String artist, String album, int artwork) {
         mTitle = title;
         mArtist = artist;
         mAlbum = album;
+        mArtwork = artwork;
     }
 
     /**
@@ -41,9 +49,18 @@ public class Song {
     }
 
     /**
-     * Get song's album name
+     * Get song album name
      */
     public String getAlbum() {
         return mAlbum;
     }
+
+    /**
+     * Get song album artwork.
+     */
+    public int getArtwork() {
+        return mArtwork;
+    }
+
+
 }
