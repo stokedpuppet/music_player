@@ -11,8 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
-    public SongAdapter(Activity context, ArrayList<Song> words) {
-        super(context, 0, words);
+    public SongAdapter(Activity context, ArrayList<Song> songs) {
+        super(context, 0, songs);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.song_list_item, parent, false);
         }
 
         Song currentSong = getItem(position);

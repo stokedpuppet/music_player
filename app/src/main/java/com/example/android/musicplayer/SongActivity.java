@@ -6,12 +6,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SongActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_song);
         // Create a list of Songs.
         ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("The Package", "A Perfect Circle",
@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
 
         listView.setAdapter(adapter);
+
+
+
+
 
 
 
