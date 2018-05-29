@@ -15,9 +15,11 @@ public class SongActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
-        //Get Intent Extras from ArtistActivity
+
+        /** Get Intent Extras from ArtistActivity */
         String chosenArtist = getIntent().getStringExtra("ARTIST_NAME");
-        // Create a list of Songs.
+
+        /** Create a list of Songs */
         final ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("The Package", "A Perfect Circle",
                 "Thirteenth Step", R.drawable.aperfectcircle_thirteenthstep));
@@ -80,22 +82,21 @@ public class SongActivity extends AppCompatActivity {
         songs.add(new Song("Policy of Truth", "Depeche Mode",
                 "Violator", R.drawable.depechemode_violator));
 
-        //SongAdapter adapter = new SongAdapter(this, songs);
-
-        ListView listView = (ListView) findViewById(R.id.list);
-
+        /** Create artistSongs ArrayList from songs ArrayList based on ArtistActivity intents. */
         final ArrayList<Song> artistSongs = new ArrayList<>();
         int size = songs.size();
         for (int i = 0; i < size; i++) {
             if (songs.get(i).getArtist().equals(chosenArtist)) {
                 artistSongs.add(songs.get(i));
             }
-
         }
-        SongAdapter adapter = new SongAdapter(this, artistSongs);
 
+        /** Link listView to XML and apply adapter */
+        ListView listView = (ListView) findViewById(R.id.list);
+        SongAdapter adapter = new SongAdapter(this, artistSongs);
         listView.setAdapter(adapter);
 
+        /** Added onClickListener for artistSongs ArrayList & started and pushed data to NowPlayingActivity */
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -109,12 +110,5 @@ public class SongActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
     }
 }
