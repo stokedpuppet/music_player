@@ -22,21 +22,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/title_text_view"
         android:textStyle="bold"
-        tools:text="The Package"
         android:textSize="18sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/artist_text_view"
-        tools:text="By: A Perfect Circle"
         android:textSize="12sp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/album_text_view"
-        tools:text="On: Thirteenth Step"
         android:textSize="12sp"/>
 
     </LinearLayout>

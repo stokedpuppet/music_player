@@ -35,10 +35,10 @@ public class ArtistActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Artist currentArtist = artists.get(position);
+                Artist selectedArtist = artists.get(position);
 
                 Intent intent = new Intent(ArtistActivity.this, SongActivity.class);
-                intent.putExtra("ARTIST_NAME", currentArtist.getArtistName());
+                intent.putExtra("ARTIST_NAME", selectedArtist.getArtistName());
                 startActivity(intent);
             }
         });

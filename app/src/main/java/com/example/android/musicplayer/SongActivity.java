@@ -1,7 +1,10 @@
 package com.example.android.musicplayer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,9 +16,9 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
         //Get Intent Extras from ArtistActivity
-        String selectedArtist = getIntent().getStringExtra("ARTIST_NAME");
+        String chosenArtist = getIntent().getStringExtra("ARTIST_NAME");
         // Create a list of Songs.
-        ArrayList<Song> songs = new ArrayList<>();
+        final ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("The Package", "A Perfect Circle",
                 "Thirteenth Step", R.drawable.aperfectcircle_thirteenthstep));
         songs.add(new Song("The Noose", "A Perfect Circle",
@@ -81,10 +84,10 @@ public class SongActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.list);
 
-        ArrayList<Song> artistSongs = new ArrayList<>();
+        final ArrayList<Song> artistSongs = new ArrayList<>();
         int size = songs.size();
         for (int i = 0; i < size; i++) {
-            if (songs.get(i).getArtist().equals(selectedArtist)) {
+            if (songs.get(i).getArtist().equals(chosenArtist)) {
                 artistSongs.add(songs.get(i));
             }
 
@@ -92,6 +95,20 @@ public class SongActivity extends AppCompatActivity {
         SongAdapter adapter = new SongAdapter(this, artistSongs);
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Song selectedSong = artistSongs.get(position);
+                Intent intent = new Intent(SongActivity.this, NowPlayingActivity.class);
+                intent.putExtra("TITLE", selectedSong.getTitle());
+                intent.putExtra("ARTIST", selectedSong.getArtist());
+                intent.putExtra("ALBUM", selectedSong.getAlbum());
+                int artwork = selectedSong.getArtwork();
+                intent.putExtra("ARTWORK", Integer.toString(artwork));
+                startActivity(intent);
+            }
+        });
 
 
 
