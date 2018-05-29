@@ -12,6 +12,8 @@ public class SongActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
+        //Get Intent Extras from ArtistActivity
+        String selectedArtist = getIntent().getStringExtra("ARTIST_NAME");
         // Create a list of Songs.
         ArrayList<Song> songs = new ArrayList<>();
         songs.add(new Song("The Package", "A Perfect Circle",
@@ -75,9 +77,19 @@ public class SongActivity extends AppCompatActivity {
         songs.add(new Song("Policy of Truth", "Depeche Mode",
                 "Violator", R.drawable.depechemode_violator));
 
-        SongAdapter adapter = new SongAdapter(this, songs);
+        //SongAdapter adapter = new SongAdapter(this, songs);
 
         ListView listView = (ListView) findViewById(R.id.list);
+
+        ArrayList<Song> artistSongs = new ArrayList<>();
+        int size = songs.size();
+        for (int i = 0; i < size; i++) {
+            if (songs.get(i).getArtist().equals(selectedArtist)) {
+                artistSongs.add(songs.get(i));
+            }
+
+        }
+        SongAdapter adapter = new SongAdapter(this, artistSongs);
 
         listView.setAdapter(adapter);
 

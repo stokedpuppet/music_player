@@ -6,18 +6,18 @@ public class Artist {
     private String mArtistName;
 
     /** Artwork for artist */
-    private int mArtistArtwork;
+    private int mArtistImg;
 
     /**
      * Create a new artist object
      *
      * @param artistName the name of the artist
      *
-     * @param artistArtwork the artwork for the artist
+     * @param artistImg the artwork for the artist
      */
-    public Artist(String artistName, int artistArtwork) {
+    public Artist(String artistName, int artistImg) {
         mArtistName = artistName;
-        mArtistArtwork = artistArtwork;
+        mArtistImg = artistImg;
     }
 
     /** Get artist name */
@@ -26,7 +26,7 @@ public class Artist {
     }
 
     /** Get artist artwork */
-    public int getArtistArtwork() {
-        return mArtistArtwork;
+    public int getArtistImg() {
+        return mArtistImg;
     }
 }
