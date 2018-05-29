@@ -3,10 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="16dp"
+    android:padding="@dimen/pad"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="#ebfaeb">
+    android:background="@color/background_color">
 
 
 
@@ -15,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="@dimen/half_pad">
     
     <TextView
         android:layout_width="match_parent"
@@ -39,20 +38,21 @@
     </LinearLayout>
 
     <ImageView
+        android:contentDescription="@string/playing_from_album"
         android:layout_alignParentLeft="true"
         android:id="@+id/album_img_view"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-
+        android:layout_width="@dimen/small_image"
+        android:layout_height="@dimen/small_image"
         android:layout_centerVertical="true"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="@dimen/pad"
         />
 
     <ImageView
+        android:contentDescription="@string/play_and_pause_icon"
         android:id="@+id/play_button_image"
         android:src="@drawable/play_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/smaller_image"
+        android:layout_height="@dimen/smaller_image"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         />

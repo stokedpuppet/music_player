@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#ebfaeb"
+    android:padding="@dimen/pad"
+    android:background="@color/background_color"
     android:gravity="center">
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:contentDescription="@string/artist_image"
+        android:layout_width="@dimen/medium_image"
+        android:layout_height="@dimen/medium_image"
         android:id="@+id/artist_img_view"
         />
     <TextView

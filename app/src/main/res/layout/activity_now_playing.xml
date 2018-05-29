@@ -4,25 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#ebfaeb">
+    android:padding="@dimen/pad"
+    android:background="@color/background_color">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Playing from Album"
+        android:text="@string/playing_from_album"
         android:gravity="center_horizontal"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/playing_album_text_view"
-
         android:gravity="center_horizontal"
         android:textStyle="bold"/>
     <ImageView
-        android:layout_marginTop="16dp"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:contentDescription="@string/album_artwork"
+        android:layout_marginTop="@dimen/pad"
+        android:layout_width="@dimen/large_image"
+        android:layout_height="@dimen/large_image"
         android:id="@+id/playing_artwork_img_view"
 
         android:layout_gravity="center_horizontal"/>
@@ -30,9 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/playing_title_text_view"
-
         android:gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/pad"
         android:textSize="16sp"
         android:textStyle="bold"/>
     <TextView
@@ -47,21 +46,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:padding="16dp"
+        android:padding="@dimen/pad"
         android:gravity="center_vertical">
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:contentDescription="@string/previous_song_icon"
+            android:layout_width="@dimen/play_buttons_size"
+            android:layout_height="@dimen/play_buttons_size"
             android:src="@drawable/backward_song"
             android:layout_weight="1"/>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:contentDescription="@string/play_and_pause_icon"
+            android:layout_width="@dimen/play_buttons_size"
+            android:layout_height="@dimen/play_buttons_size"
             android:src="@drawable/play_song"
             android:layout_weight="1"/>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:contentDescription="@string/next_song_icon"
+            android:layout_width="@dimen/play_buttons_size"
+            android:layout_height="@dimen/play_buttons_size"
             android:src="@drawable/forward_song"
             android:layout_weight="1"/>
 

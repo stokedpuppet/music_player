@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Music Player</string>
+    <string name="playing_from_album">Playing from Album</string>
+    <string name="album_artwork">album artwork</string>
+    <string name="previous_song_icon">previous song icon</string>
+    <string name="play_and_pause_icon">play and pause icon</string>
+    <string name="next_song_icon">next song icon</string>
+    <string name="artist_image">artist image</string>
 </resources>
