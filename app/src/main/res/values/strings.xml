@@ -6,4 +6,5 @@
     <string name="play_and_pause_icon">play and pause icon</string>
     <string name="next_song_icon">next song icon</string>
     <string name="artist_image">artist image</string>
+    <string name="artists">Artists</string>
 </resources>

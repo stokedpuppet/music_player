@@ -16,7 +16,7 @@ public class SongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
-        /** Get Intent Extras from ArtistActivity */
+        /** Get Intent Extras from ArtistActivity or NowPlayingActivity */
         String chosenArtist = getIntent().getStringExtra("ARTIST_NAME");
 
         /** Create a list of Songs */

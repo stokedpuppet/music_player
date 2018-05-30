@@ -17,6 +17,9 @@ public class ArtistActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artist);
 
+        /** Set action bar title */
+        setTitle(getString(R.string.artists));
+
         /** Create a list of Artists */
         final ArrayList<Artist> artists = new ArrayList<>();
         artists.add(new Artist("A Perfect Circle", R.drawable.aperfectcircle));

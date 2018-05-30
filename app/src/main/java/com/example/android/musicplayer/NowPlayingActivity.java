@@ -1,7 +1,9 @@
 package com.example.android.musicplayer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,6 +32,21 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         TextView playingArtistTextView = findViewById(R.id.playing_artist_text_view);
         playingArtistTextView.setText(chosenArtist);
-
     }
+
+    /** Return to previous activity when back action bar button is pressed */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent intent = new Intent(NowPlayingActivity.this, SongActivity.class);
+                /** Pass the previously chosen artist back to SongActivity */
+                intent.putExtra("ARTIST_NAME", getIntent().getStringExtra("ARTIST"));
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

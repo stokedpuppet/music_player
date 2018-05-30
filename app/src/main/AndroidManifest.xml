@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".SongActivity"
-            android:label="Songs">
-        </activity>
         <activity android:name=".ArtistActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +17,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SongActivity"
+            android:label="Songs"
+            android:parentActivityName=".ArtistActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ArtistActivity" />
+        </activity>
+        <activity
             android:name=".NowPlayingActivity"
-            android:label="Now Playing">
+            android:label="Now Playing"
+            android:parentActivityName=".SongActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SongActivity" />
         </activity>
     </application>
 
