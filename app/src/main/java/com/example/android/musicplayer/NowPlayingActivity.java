@@ -34,7 +34,9 @@ public class NowPlayingActivity extends AppCompatActivity {
         playingArtistTextView.setText(chosenArtist);
     }
 
-    /** Return to previous activity when back action bar button is pressed */
+    /**
+     * Return to previous activity when back action bar button is pressed
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

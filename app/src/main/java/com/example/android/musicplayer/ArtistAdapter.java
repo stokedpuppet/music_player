@@ -11,7 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class ArtistAdapter extends ArrayAdapter<Artist> {
-    /** Create new ArtistAdapter object */
+    /**
+     * Create new ArtistAdapter object
+     */
     public ArtistAdapter(Activity context, ArrayList<Artist> artists) {
         super(context, 0, artists);
     }

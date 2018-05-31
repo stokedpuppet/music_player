@@ -11,7 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
-    /** Create new SongAdapter object */
+    /**
+     * Create new SongAdapter object
+     */
     public SongAdapter(Activity context, ArrayList<Song> songs) {
         super(context, 0, songs);
     }

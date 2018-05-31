@@ -1,30 +1,33 @@
 package com.example.android.musicplayer;
 
 public class Song {
-    /** Song title */
+    /**
+     * Song title
+     */
     private String mTitle;
 
-    /** Song artist */
-    private  String mArtist;
+    /**
+     * Song artist
+     */
+    private String mArtist;
 
-    /** Song album name */
+    /**
+     * Song album name
+     */
     private String mAlbum;
 
-    /** Song album art */
+    /**
+     * Song album art
+     */
     private int mArtwork;
-
-
 
 
     /**
      * * Create a new Song object.
      *
-     * @param  title the name of the song
-     *
-     * @param artist the artist of the song
-     *
-     * @param album the album name of the song
-     *
+     * @param title   the name of the song
+     * @param artist  the artist of the song
+     * @param album   the album name of the song
      * @param artwork the album artwork of the song
      */
     public Song(String title, String artist, String album, int artwork) {
